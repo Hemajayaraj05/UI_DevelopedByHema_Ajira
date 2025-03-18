@@ -3,9 +3,13 @@ import React, { useState } from "react";
 function Conimg() {
   const [email,setEmail] = useState("");
 
-  const handleSubscribe = () => {
+  const handleSubscribe=()=>{
 
   };
+
+  const handlelocation=()=>{
+
+  }
 
   return (
     <div className="relative">
@@ -20,7 +24,7 @@ function Conimg() {
                     Subscribe to our Newsletter
                 </h2>
                 <br />
-            <div className="flex  flex-col md:flex-row gap-2">
+            <div className="flex  flex-col md:flex-row gap-2 ">
                     <input
                     type="email"
                     className="flex h-10 w-[350px] pl-3 rounded-sm"
@@ -34,8 +38,14 @@ function Conimg() {
                     SUBSCRIBE
                     </button>
             </div>
-            <br />
             </div>
+            <div className="absolute bottom-0 left-3/4 transform -translate-x-1/2">
+          <button
+          className="bg-gray-600 text-white font-bold text-sm h-10 pl-6 pr-6 rounded-sm"
+          onClick={handlelocation} >
+          Locate Us
+        </button>
+      </div>
     
     </div>
   );
