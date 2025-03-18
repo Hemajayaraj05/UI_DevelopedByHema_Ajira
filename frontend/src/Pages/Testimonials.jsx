@@ -1,25 +1,9 @@
 import React from "react";
+import testimonials from "../JSON/testimonial.json";
 
 function Testimonials(){
 
-    const testimonials=[{
-        name:"Vikas",
-        rating:"⭐⭐⭐⭐⭐",
-        image:"test.jpg",
-        feedback: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus suscipit delectus et nisi aspernatur vitae dolore ducimus voluptates, explicabo eligendi distinctio! Earum nam sequi magni a velit iure reiciendis. Labore!"
-    },
-    {
-        name:"Rahul",
-        rating:"⭐⭐⭐",
-        image:"test.jpg",
-        feedback: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus suscipit delectus et nisi aspernatur vitae dolore ducimus voluptates, explicabo eligendi distinctio! Earum nam sequi magni a velit iure reiciendis. Labore!"
-    },
-    {
-        name:"Abdul",
-        rating:"⭐⭐⭐⭐",
-        image:"test.jpg",
-        feedback: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus suscipit delectus et nisi aspernatur vitae dolore ducimus voluptates, explicabo eligendi distinctio! Earum nam sequi magni a velit iure reiciendis. Labore!"
-    }]
+  
 
     return(
         <div className="flex flex-col h-auto w-full bg-[#F9F9F9] p-6">

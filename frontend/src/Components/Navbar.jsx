@@ -74,8 +74,7 @@ function Navbar() {
         <img 
           src={item.image} 
           alt={item.name} 
-          className="w-full h-full object-cover"
-        />
+          className="w-full h-full object-cover"/>
       </div>
       {item.name}
     </a>
