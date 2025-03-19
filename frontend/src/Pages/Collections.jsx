@@ -1,7 +1,22 @@
-import React from "react";
-import mensOutfits from "../JSON/Collections.json";
-
+import React, { useEffect,useState } from "react";
+// import mensOutfits from "../JSON/Collections.json";
+import { getCollection } from "../../services/collservice";
 function Collections(){
+
+  const [mensOutfits,setMensOutfit]=useState([]);
+  useEffect(()=>{
+    async function fetchData(){
+      try{
+        const data=await getCollection();
+        setMensOutfit(data);
+      }
+      catch(err)
+      {
+        console.log("Error in fetching the data");
+      }
+    }
+    fetchData();
+  },[])
   
 
     return(

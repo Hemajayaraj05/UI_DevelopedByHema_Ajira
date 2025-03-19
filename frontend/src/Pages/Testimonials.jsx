@@ -1,9 +1,21 @@
-import React from "react";
-import testimonials from "../JSON/testimonial.json";
-
+import React, { useEffect,useState } from "react";
+// import testimonials from "../JSON/testimonial.json";
+import { getTestimonials } from "../../services/testservice";
 function Testimonials(){
 
-  
+  const[testimonials,setTestimonials]=useState([]);
+
+  useEffect(()=>{
+    async function fetchData() {
+      try {
+        const data=await getTestimonials();
+        setTestimonials(data);
+      } catch (err) {
+        console.log("Error fetching testimonials:", error);
+      }
+    }
+    fetchData();
+  }, []);
 
     return(
         <div className="flex flex-col h-auto w-full bg-[#F9F9F9] p-6">
